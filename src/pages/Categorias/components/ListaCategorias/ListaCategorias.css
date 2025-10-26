@@ -1,0 +1,60 @@
+.lista-categorias-container {
+  margin-top: 2rem;
+}
+
+.lista-categorias-neumorph {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoria-item-neumorph {
+  background: #f0f2f5;
+  border-radius: 15px;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.categoria-item-neumorph:last-child {
+  margin-bottom: 0;
+}
+
+.categoria-item-neumorph.editando {
+  box-shadow: inset 8px 8px 15px #d9d9d9, inset -8px -8px 15px #ffffff;
+}
+
+.categoria-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.categoria-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.neumorphic-icon-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #6c757d;
+  box-shadow: 4px 4px 8px #d9d9d9, -4px -4px 8px #ffffff;
+  transition: all 0.2s ease;
+}
+
+.neumorphic-icon-button:active {
+}
+
+.neumorphic-icon-button.danger {
+  color: var(--gastos-color);
+}

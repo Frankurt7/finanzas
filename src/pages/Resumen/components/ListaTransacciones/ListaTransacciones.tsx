@@ -1,0 +1,24 @@
+import { ITransaction } from "slices/financesSlice";
+import { TransaccionItem } from "./components";
+import { Link } from "react-router-dom";
+import "./ListaTransacciones.css";
+
+interface IListaTransaccionesPorps {
+    transacciones: Array<ITransaction>
+}
+
+export default function ListaTransacciones({ transacciones }: IListaTransaccionesPorps) {
+    return (
+        <div className="lista-transacciones-container">
+            <div className="lista-transacciones-header">
+                <h5>Ultimos gastos</h5>
+                <Link to="/gastosCompletos" className="ver-mas-link">Ver todos</Link>
+            </div>
+            <div className="lista-transacciones-neumorph">
+                {transacciones.map((t) => (
+                    <TransaccionItem key={t.id} transaccion={t} />
+                ))}
+            </div>
+        </div>
+    )
+}

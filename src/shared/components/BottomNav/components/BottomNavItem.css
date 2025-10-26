@@ -1,0 +1,25 @@
+.bottom-nav-item-neumorph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 60px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #707070;
+  background: #f0f2f5;
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.bottom-nav-item-neumorph.active {
+  box-shadow: inset 5px 5px 10px #d9d9d9, inset -5px -5px 10px #ffffff;
+  color: var(--active-color);
+}
+
+.bottom-nav-item-neumorph div {
+  font-size: 0.8rem;
+  margin-top: 4px;
+}

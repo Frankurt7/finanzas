@@ -1,0 +1,29 @@
+.lista-transacciones-neumorph {
+  border-radius: 20px;
+  padding: 0rem 0rem 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lista-transacciones-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.lista-transacciones-header h5 {
+  margin-bottom: 0; /* Reseteamos el margen del título */
+}
+
+.ver-mas-link {
+  color: var(--text-color); /* Usar el color de texto general */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.ver-mas-link:hover {
+  text-decoration: underline;
+}

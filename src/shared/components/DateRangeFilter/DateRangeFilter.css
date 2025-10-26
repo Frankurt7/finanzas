@@ -1,0 +1,33 @@
+.date-range-filter {
+  display: flex;
+  gap: 0.55rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto; /* Para que sea scrollable en pantallas pequeñas */
+  padding-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 12px; /* Coincidir con otros botones */
+  background-color: var(--background-color);
+  color: var(--text-color-light);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff; /* Estilo base elevado */
+  white-space: nowrap; /* Evita que el texto se parta */
+}
+
+.filter-button.active {
+  color: var(
+    --primary-color
+  ) !important; /* Color de texto para el botón activo */
+  box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff; /* Estilo hundido */
+}
+
+.filter-button:active {
+  box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff; /* Hundido al presionar */
+}

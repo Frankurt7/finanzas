@@ -1,0 +1,7 @@
+.currency-slash {
+  font-size: calc(0.65em);
+  position: relative;
+  top: -0.15em;
+  font-weight: 900;
+  text-shadow: 0.5px 0 currentColor;
+}

@@ -1,0 +1,54 @@
+.total-gastos-content {
+  padding: 0.5rem 0rem 3rem 0rem;
+}
+
+.no-transactions-message {
+  text-align: center;
+  color: var(--text-color-light);
+  padding: 2rem 0;
+  font-style: italic;
+}
+
+.transaction-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Espaciado entre los items de transacción */
+}
+
+.transaction-group-date {
+  font-size: 13px; /* Tamaño de fuente más pequeño */
+  font-weight: bold;
+  color: #888;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-left: 1rem; /* Padding izquierdo para la fecha */
+  margin-bottom: 0; /* El gap del contenedor padre ya maneja el espaciado */
+}
+
+/* --- Category Filter --- */
+.category-filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.neumorphic-button-sm {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: var(--background-color);
+  box-shadow: 4px 4px 8px #d9d9d9, -4px -4px 8px #ffffff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.neumorphic-button-sm.active {
+  box-shadow: inset 4px 4px 8px #d9d9d9, inset -4px -4px 8px #ffffff;
+  color: var(--primary-color);
+  font-weight: bold;
+}

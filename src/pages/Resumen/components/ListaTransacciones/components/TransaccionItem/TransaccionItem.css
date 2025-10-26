@@ -1,0 +1,136 @@
+.transaccion-item-wrapper {
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+/* Collapsed Neumorphic Style */
+.transaccion-collapsed-neumorph {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+  background: var(--background-color);
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+  transition: all 0.3s ease-in-out;
+  height: 3.5rem;
+}
+
+.transaccion-collapsed-neumorph .description {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.transaccion-collapsed-neumorph .amount {
+  color: var(--danger-color);
+  font-weight: 600;
+}
+
+/* Expanded Card Style */
+.transaccion-expanded-card {
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: var(--background-color);
+  box-shadow: 7px 7px 15px #d1d1d1, -7px -7px 15px #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.expanded-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.category-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--background-color);
+  box-shadow: inset 3px 3px 6px #d1d1d1, inset -3px -3px 6px #ffffff;
+  color: #555;
+}
+
+.category {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.description-expanded {
+  font-size: 0.95rem;
+  font-weight: normal;
+  color: #4a4a4a;
+  margin: 0;
+  padding-left: calc(40px + 0.75rem); /* Alineado con la categoría */
+}
+
+.separator {
+  width: 100%;
+  height: 2px;
+  background: var(--background-color);
+  border-radius: 1px;
+  box-shadow: inset 1px 1px 2px #d1d1d1, inset -1px -1px 2px #ffffff;
+  margin: 0.5rem 0;
+}
+
+.amount-expanded {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.transaccion-expanded-card.ingreso .amount-expanded {
+  color: var(--success-color);
+  text-shadow: 1px 1px 1px #ffffff, -1px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.transaccion-expanded-card.gasto .amount-expanded {
+  color: var(--danger-color);
+  text-shadow: 1px 1px 1px #ffffff, -1px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.date-expanded {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #9e9e9e;
+}
+
+.expanded-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+  background-color: #f0f0f0;
+  color: var(--danger-color);
+}

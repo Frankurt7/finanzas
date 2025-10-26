@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+:root {
+  --bs-body-font-family: "Poppins", sans-serif !important;
+}
+
+body {
+  background-color: #f0f2f5; /* Base color for neumorphism */
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+}

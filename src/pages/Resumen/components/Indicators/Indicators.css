@@ -1,0 +1,35 @@
+/* --- Panel Principal de Gastos --- */
+.total-gastos-panel {
+  width: 100%;
+  max-width: 400px; /* O el ancho que prefieras */
+  padding: 2rem 1rem;
+  border-radius: 25px;
+  background: var(--background-color);
+  box-shadow: 9px 9px 18px #d9d9d9, -9px -9px 18px #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.3rem;
+}
+
+.total-gastos-label {
+  font-size: 1rem; /* Tamaño mediano para la etiqueta */
+  color: #555;
+}
+
+.total-gastos-amount {
+  font-size: 3.5em; /* Tamaño grande para el monto */
+  font-weight: 900; /* Extra-bold */
+  color: var(--danger-color); /* O un color oscuro como #333 */
+  margin: 0;
+}
+
+.total-gastos-slash {
+  font-size: calc(2.3rem);
+  position: relative;
+  top: -0.15em; /* Ajuste vertical para que se vea centrado */
+  font-weight: 900; /* Aseguramos que herede el grosor */
+  text-shadow: 0.5px 0 currentColor; /* Pequeña sombra para engrosar visualmente */
+}

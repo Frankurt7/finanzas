@@ -1,0 +1,45 @@
+.full-height-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.5rem;
+  position: relative; /* Necesario para posicionar el botón */
+  padding-bottom: 80px; /* Espacio para el botón fijo */
+}
+
+.full-height-form .neumorphic-form-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.form-actions-fixed {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  background-color: var(
+    --background-color
+  ); /* Para que no se vea el contenido de atrás */
+  z-index: 10;
+}
+
+.neumorphic-button {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: var(--background-color);
+  box-shadow: var(--neumorphic-shadow);
+  color: var(--text-color) !important;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.neumorphic-button:active {
+  box-shadow: var(--neumorphic-shadow-inset);
+  color: var(--primary-color) !important;
+}

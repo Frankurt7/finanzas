@@ -1,0 +1,106 @@
+.neumorphic-form-container {
+  background: #f0f2f5;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 8px 8px 15px #d9d9d9, -8px -8px 15px #ffffff;
+}
+
+.neumorphic-form-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.neumorphic-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.neumorphic-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.neumorphic-input,
+.neumorphic-textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f0f2f5;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: inset 6px 6px 12px #d9d9d9, inset -6px -6px 12px #ffffff;
+  font-size: 1rem;
+  color: #555;
+}
+
+.neumorphic-input:focus,
+.neumorphic-textarea:focus {
+  box-shadow: inset 8px 8px 15px #d9d9d9, inset -8px -8px 15px #ffffff;
+}
+
+.neumorphic-button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 6px 6px 12px #d9d9d9, -6px -6px 12px #ffffff;
+}
+
+.neumorphic-button:active {
+  box-shadow: inset 6px 6px 12px #d9d9d9, inset -6px -6px 12px #ffffff;
+}
+
+.neumorphic-button.success {
+  background: var(--ingresos-color);
+}
+
+.neumorphic-button.danger {
+  background: var(--gastos-color);
+}
+
+/* React-Select Neumorphic Styles */
+.neumorphic-select .Select__control {
+  background-color: #f0f2f5 !important;
+  border: none !important;
+  box-shadow: inset 6px 6px 12px #d9d9d9, inset -6px -6px 12px #ffffff !important;
+  border-radius: 10px !important;
+  padding: 0.5rem !important;
+  min-width: 5rem;
+}
+
+.neumorphic-select .Select__control--is-focused {
+  box-shadow: inset 8px 8px 15px #d9d9d9, inset -8px -8px 15px #ffffff !important;
+}
+
+.neumorphic-select .Select__menu {
+  background-color: #f0f2f5 !important;
+  border-radius: 10px !important;
+  box-shadow: 6px 6px 12px #d9d9d9, -6px -6px 12px #ffffff !important;
+  min-width: 6rem;
+}
+
+.neumorphic-select .Select__option--is-focused {
+  background-color: #e0e0e0 !important;
+}
+
+.neumorphic-select .Select__option--is-selected {
+  background-color: #d0d0d0 !important;
+  color: #333 !important;
+}
+
+.neumorphic-select .Select__indicator-separator {
+  display: none !important;
+}
+
+.neumorphic-select .Select__dropdown-indicator {
+  display: none !important;
+}

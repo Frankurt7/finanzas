@@ -1,0 +1,22 @@
+.neumorphic-tabs .nav-link {
+  border: none;
+  background-color: transparent;
+  color: #555;
+  border-radius: 15px;
+  margin: 0 5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+}
+
+.neumorphic-tabs .nav-link.active {
+  background-color: #f0f2f5 !important;
+  color: var(--balance-color);
+  box-shadow: inset 5px 5px 10px #d9d9d9, inset -5px -5px 10px #ffffff;
+}
+
+.neumorphic-tabs .tab-content {
+  background: #f0f2f5;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 8px 8px 15px #d9d9d9, -8px -8px 15px #ffffff;
+}

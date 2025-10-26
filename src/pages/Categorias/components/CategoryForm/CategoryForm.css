@@ -1,0 +1,21 @@
+/* Los estilos se han movido al componente CategoryForm.tsx */
+/* Este archivo puede permanecer vacío o ser eliminado si no tiene otras reglas. */
+
+.neumorphic-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: var(--background-color);
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+  color: #333 !important; /* Forzar color oscuro para el texto */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.neumorphic-button:active,
+.neumorphic-button:focus {
+  box-shadow: inset 3px 3px 6px #bebebe, inset -3px -3px 6px #ffffff;
+  color: var(--primary-color);
+}
