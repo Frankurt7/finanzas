@@ -15,9 +15,9 @@ const initialState: CategoriasState = {
   lista: [
     { id: 1, nombre: "Hogar", icono: "Home" },
     { id: 2, nombre: "Restaurantes", icono: "Salad" },
-    { id: 2, nombre: "Cine", icono: "Ticket" },
+    { id: 3, nombre: "Cine", icono: "Ticket" },
   ],
-  nextId: 10,
+  nextId: 4,
 };
 
 const categoriasSlice = createSlice({
