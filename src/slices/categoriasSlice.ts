@@ -13,15 +13,9 @@ interface CategoriasState {
 
 const initialState: CategoriasState = {
   lista: [
-    { id: 1, nombre: "Hogar", icono: "House" },
-    { id: 2, nombre: "Comida", icono: "CupStraw" },
-    { id: 3, nombre: "Transporte", icono: "CarFront" },
-    { id: 4, nombre: "Salud", icono: "HeartPulse" },
-    { id: 5, nombre: "Educación", icono: "Mortarboard" },
-    { id: 6, nombre: "Trabajo", icono: "Briefcase" },
-    { id: 7, nombre: "Ocio", icono: "Film" },
-    { id: 8, nombre: "Compras", icono: "Bag" },
-    { id: 9, nombre: "Finanzas", icono: "CreditCard" },
+    { id: 1, nombre: "Hogar", icono: "Home" },
+    { id: 2, nombre: "Restaurantes", icono: "Salad" },
+    { id: 2, nombre: "Cine", icono: "Ticket" },
   ],
   nextId: 10,
 };
