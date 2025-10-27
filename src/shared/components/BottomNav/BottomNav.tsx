@@ -12,25 +12,25 @@ const navItems = [
     to: "/",
     label: "Resumen",
     icon: <HouseDoorFill size={22} />,
-    activeColor: "var(--balance-color)",
+    activeColor: "70BBDD",
   },
   {
     to: "/gastos",
     label: "Registrar",
     icon: <PlusCircleFill size={22} className="gastos-icon" />,
-    activeColor: "var(--gastos-color)",
+    activeColor: "70BBDD",
   },
   {
     to: "/gastosCompletos",
     label: "Gastos",
     icon: <JournalBookmarkFill size={22} />,
-    activeColor: "var(--listado-color)",
+    activeColor: "70BBDD",
   },
   {
     to: "/categorias",
     label: "Categorías",
     icon: <GridFill size={22} />,
-    activeColor: "var(--categorias-color)",
+    activeColor: "70BBDD",
   },
 ];
 
