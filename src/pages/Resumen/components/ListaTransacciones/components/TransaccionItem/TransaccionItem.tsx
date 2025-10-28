@@ -63,7 +63,7 @@ export default function TransaccionItem({ transaccion }: TransaccionItemProps) {
                 </div>
             ) : (
                 <div className="transaccion-collapsed-neumorph">
-                    <div className="d-flex align-items-center gap-2 overflow-hidden">
+                    <div className="d-flex align-items-center overflow-hidden" style={{ gap: '0.75rem' }}>
                         {IconoCategoria && <IconoCategoria size={18} className="flex-shrink-0" />}
                         <span className="description">{transaccion.descripcion || transaccion.categoria}</span>
                     </div>

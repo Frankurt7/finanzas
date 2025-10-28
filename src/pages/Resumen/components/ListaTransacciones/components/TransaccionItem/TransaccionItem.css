@@ -1,6 +1,6 @@
 .transaccion-item-wrapper {
   cursor: pointer;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0rem;
 }
 
 /* Collapsed Neumorphic Style */
@@ -17,7 +17,7 @@
 }
 
 .transaccion-collapsed-neumorph .description {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #555;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -31,7 +31,7 @@
   font-weight: 600;
   flex-shrink: 0; /* Evita que el monto se encoja */
   white-space: nowrap; /* Asegura que el monto no se divida en varias líneas */
-  margin-left: 2rem; /* Añade un pequeño espacio a la izquierda */
+  margin-left: 1.25rem; /* Añade un pequeño espacio a la izquierda */
 }
 
 /* Expanded Card Style */
@@ -85,7 +85,7 @@
   padding-left: calc(40px + 0.75rem); /* Alineado con la categoría */
   /* Permitimos que el texto se divida para evitar desbordamiento */
   word-break: break-word;
-  max-width: 80%;
+  max-width: 85%;
 }
 
 .separator {
