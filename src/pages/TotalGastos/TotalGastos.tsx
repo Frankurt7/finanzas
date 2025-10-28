@@ -150,7 +150,7 @@ export default function TotalGastos() {
                         {formattedTotalGastos}
                     </h1>
 
-                    <div className="lista-transacciones-neumorph">
+                    <div className="lista-transacciones-neumorph custom-scrollbar-hidden">
                         {Object.keys(groupedTransactions).length > 0 ? (
                             Object.entries(groupedTransactions).map(([dateKey, transactions]) => {
                                 const date = new Date(`${transactions[0].fecha}T00:00:00`);

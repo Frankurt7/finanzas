@@ -5,7 +5,7 @@ import { GastosLineChart } from "./GastosLineChart";
 
 export const GraphsData = () => {
     return (
-        <div >
+        <div  className="pb-2">
             <h4>Gráficos</h4>
             <Tabs defaultActiveKey="evolucion" id="graficos-tabs" className="mb-3 mt-4 neumorphic-tabs">
                 <Tab eventKey="evolucion" title="Evolución">

@@ -1,9 +1,11 @@
 .lista-transacciones-neumorph {
-  border-radius: 20px;
-  padding: 0rem 0rem 1rem 0rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  max-height: 30.5rem;
+  overflow-y: auto; /* O 'scroll' si quieres que la barra siempre sea visible */
+  border-radius: 20px;
+  padding: 0rem 0rem 0rem 0rem;
 }
 
 .lista-transacciones-header {

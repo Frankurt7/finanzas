@@ -5,6 +5,10 @@
 .lista-categorias-neumorph {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+  max-height: 28rem;
+  overflow-y: auto; /* O 'scroll' si quieres que la barra siempre sea visible */
+  border-radius: 20px;
 }
 
 .categoria-item-neumorph {

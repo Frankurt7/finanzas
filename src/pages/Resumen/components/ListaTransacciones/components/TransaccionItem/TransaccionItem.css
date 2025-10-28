@@ -19,11 +19,19 @@
 .transaccion-collapsed-neumorph .description {
   font-size: 0.9rem;
   color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
+  -webkit-box-orient: vertical;
 }
 
 .transaccion-collapsed-neumorph .amount {
   color: var(--danger-color);
   font-weight: 600;
+  flex-shrink: 0; /* Evita que el monto se encoja */
+  white-space: nowrap; /* Asegura que el monto no se divida en varias líneas */
+  margin-left: 2rem; /* Añade un pequeño espacio a la izquierda */
 }
 
 /* Expanded Card Style */
@@ -75,6 +83,9 @@
   color: #4a4a4a;
   margin: 0;
   padding-left: calc(40px + 0.75rem); /* Alineado con la categoría */
+  /* Permitimos que el texto se divida para evitar desbordamiento */
+  word-break: break-word;
+  max-width: 80%;
 }
 
 .separator {
@@ -128,6 +139,9 @@
   justify-content: center;
   color: #888;
   transition: all 0.2s ease-in-out;
+  width: 2rem !important;
+  height: 2rem !important;
+  padding: 0.5rem !important;
 }
 
 .delete-button:hover {

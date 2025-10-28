@@ -14,7 +14,7 @@ export default function ListaTransacciones({ transacciones }: IListaTransaccione
                 <h5>Ultimos gastos</h5>
                 <Link to="/gastosCompletos" className="ver-mas-link">Ver todos</Link>
             </div>
-            <div className="lista-transacciones-neumorph">
+            <div className="lista-transacciones-neumorph custom-scrollbar-hidden">
                 {transacciones.map((t) => (
                     <TransaccionItem key={t.id} transaccion={t} />
                 ))}

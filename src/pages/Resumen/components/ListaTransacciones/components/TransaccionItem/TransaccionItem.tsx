@@ -56,7 +56,7 @@ export default function TransaccionItem({ transaccion }: TransaccionItemProps) {
                     </div>
                     <div className="expanded-footer">
                         <div className="date-expanded">{formatDate(transaccion.fecha)}</div>
-                        <button className="delete-button" onClick={handleDelete} title="Eliminar transacción">
+                        <button className="delete-button neumorphic-button" onClick={handleDelete} title="Eliminar transacción">
                             <Trash size={18} />
                         </button>
                     </div>

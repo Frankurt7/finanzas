@@ -64,6 +64,7 @@ export const GastosLineChart = () => {
 
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: { display: false },
             tooltip: {
@@ -76,5 +77,9 @@ export const GastosLineChart = () => {
             },
         },
     };
-    return <Line options={options} data={data} />;
+    return (
+        <div style={{ height: '230px' }}>
+            <Line options={options} data={data} />
+        </div>
+    );
 };

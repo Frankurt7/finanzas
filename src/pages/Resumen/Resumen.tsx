@@ -26,7 +26,7 @@ export default function Resumen() {
     const tieneTransacciones = transacciones.length > 0;
 
     return (
-        <div style={{ padding: '1.5rem', paddingBottom: '5rem' }}>
+        <div style={{ padding: '1.5rem' }}>
             <Container fluid className="p-2 d-flex flex-column gap-4">
                 <Indicators
                     transacciones={transacciones}

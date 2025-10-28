@@ -26,4 +26,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #f0f2f5;
+  max-height: 92%;
+  overflow-y: auto;
 }
