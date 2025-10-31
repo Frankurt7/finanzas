@@ -11,6 +11,7 @@ export const Categorias = () => {
     const categorias = useSelector((state: RootState) => state.categorias.lista);
 
     const [editando, setEditando] = useState<number | null>(null);
+    const [isFormVisible, setIsFormVisible] = useState(false);
 
     const handleSubmit = (data: { nombre: string; icono: string }) => {
         const { nombre, icono } = data;
@@ -28,6 +29,7 @@ export const Categorias = () => {
 
     const handleEdit = (categoria: ICategoria) => {
         setEditando(categoria.id);
+        setIsFormVisible(true);
     };
 
     const handleDelete = (id: number) => {
@@ -36,6 +38,7 @@ export const Categorias = () => {
 
     const limpiarFormulario = () => {
         setEditando(null);
+        setIsFormVisible(false);
     };
 
     const categoriaEnEdicion = editando !== null ? categorias.find(c => c.id === editando) : null;
@@ -44,11 +47,15 @@ export const Categorias = () => {
         <div className="neumorphic-form-container">
             <h4 className="neumorphic-form-title">Categorías</h4>
 
-            <CategoryForm
-                onSubmit={handleSubmit}
-                onCancel={limpiarFormulario}
-                initialData={categoriaEnEdicion}
-            />
+            {isFormVisible || editando !== null ? (
+                <CategoryForm
+                    onSubmit={handleSubmit}
+                    onCancel={limpiarFormulario}
+                    initialData={categoriaEnEdicion}
+                />
+            ) : (
+                <button className="neumorphic-button" onClick={() => setIsFormVisible(true)}>Agregar Categoría</button>
+            )}
 
             <hr style={{ margin: "2rem 0" }} />
 
@@ -61,5 +68,3 @@ export const Categorias = () => {
         </div>
     );
 }
-
-

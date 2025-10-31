@@ -1,7 +1,7 @@
 import { Categorias, Gastos, Resumen, TotalGastos } from "pages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BottomNav } from "shared/components";
-
+import { Toaster } from "react-hot-toast";
 
 import "./App.css"
 
@@ -24,6 +24,4 @@ export const App = () => {
       </div>
     </BrowserRouter>
   );
-}
-
 }

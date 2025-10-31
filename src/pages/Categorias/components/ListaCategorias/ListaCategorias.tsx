@@ -1,7 +1,8 @@
 import { Pencil, Trash } from "react-bootstrap-icons";
 import { ICategoria } from "slices/categoriasSlice";
-import "./ListaCategorias.css";
 import { getIconComponent } from "../IconOptions";
+
+import "./ListaCategorias.css";
 
 interface ListaCategoriasProps {
     categorias: ICategoria[];
