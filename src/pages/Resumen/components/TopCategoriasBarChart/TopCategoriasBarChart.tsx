@@ -42,17 +42,15 @@ export const TopCategoriasBarChart = () => {
 
         const top5Categorias = Object.entries(gastosTotalesCategoria)
             .sort(([, a], [, b]) => b - a)
-            .slice(0, 5)
+            .slice(0, 3)
             .map(([nombre]) => nombre);
 
         // 2. Preparar datos para el gráfico de barras para los últimos 6 meses
         const labels: string[] = [];
         const colorPalette = [
             'rgba(107, 142, 184, 0.7)', // Muted Blue
-            'rgba(102, 178, 178, 0.7)', // Muted Teal
             'rgba(215, 138, 109, 0.7)', // Muted Terracotta
             'rgba(161, 147, 194, 0.7)', // Muted Lavender
-            'rgba(156, 156, 156, 0.7)',  // Warm Gray
         ];
         const datasets = top5Categorias.map((categoria, index) => ({
             label: categoria,
@@ -120,5 +118,9 @@ export const TopCategoriasBarChart = () => {
         barPercentage: 0.9,      // Aumenta el ancho de cada barra individual dentro del grupo
     };
 
-    return <Bar options={options} data={data} />;
+    return (
+        <div style={{ height: '230px' }}>
+            <Bar options={options} data={data} />
+        </div>
+    );
 };

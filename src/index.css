@@ -25,3 +25,16 @@ body {
     background-color: #eef0f4;
   }
 }
+
+/* Ocultar la barra de scroll en toda la aplicación pero mantener la funcionalidad */
+body, .custom-scrollbar-hidden {
+  /* Para Firefox */
+  scrollbar-width: none;
+  /* Para IE y Edge antiguos */
+  -ms-overflow-style: none;
+}
+
+/* Para Chrome, Safari y otros navegadores WebKit */
+body::-webkit-scrollbar, .custom-scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
