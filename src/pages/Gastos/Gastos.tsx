@@ -36,6 +36,8 @@ export const Gastos = () => {
             })
         );
 
+        toast.success("Se registró exitosamente");
+
         setMonto("");
         setFecha("");
         setCategoria("");

@@ -8,6 +8,7 @@ import "./App.css"
 export const App = () => {
   return (
     <BrowserRouter>
+      <Toaster position="top-center" />
       <div className="app-container d-flex flex-column min-vh-100">
         {/* Contenido principal */}
         <div className="main-content flex-grow-1">
@@ -23,4 +24,6 @@ export const App = () => {
       </div>
     </BrowserRouter>
   );
+}
+
 }
