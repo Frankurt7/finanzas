@@ -17,7 +17,7 @@
 }
 
 .transaccion-collapsed-neumorph .description {
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   color: #555;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -26,9 +26,10 @@
   -webkit-box-orient: vertical;
 }
 
-.transaccion-collapsed-neumorph .amount {
+.transaccion-collapsed-neumorph .transaccion-item-amount {
   color: var(--danger-color);
-  font-weight: 600;
+  font-weight: normal;
+  font-size: 0.9375rem;
   flex-shrink: 0; /* Evita que el monto se encoja */
   white-space: nowrap; /* Asegura que el monto no se divida en varias líneas */
   margin-left: 1.25rem; /* Añade un pequeño espacio a la izquierda */

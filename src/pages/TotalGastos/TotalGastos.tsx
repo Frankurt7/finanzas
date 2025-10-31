@@ -11,6 +11,7 @@ import { getFontSizeForAmount } from "shared/utils/formatText.utils";
 import { formatCurrency } from "shared/utils/number.utils";
 import { useCountUp } from "./useCountUp";
 import { iconOptions } from "pages/Categorias/components/IconOptions";
+import { useNotifications } from "shared/hooks/useNotifications";
 
 export const TotalGastos = () => {
     const allTransactions = useSelector(
@@ -21,6 +22,7 @@ export const TotalGastos = () => {
     );
     const [filter, setFilter] = useState<DateRange>("all");
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+    const { permission, requestNotificationPermission } = useNotifications();
 
     const existingCategories = useMemo(() => {
         const categoriesInTransactions = new Set(allTransactions.map(t => t.categoria));
@@ -149,6 +151,15 @@ export const TotalGastos = () => {
                         {formattedTotalGastos}
                     </h1>
 
+                    {permission === "default" && (
+                        <div className="d-flex justify-content-center mb-3">
+                            <button className="neumorphic-button" onClick={requestNotificationPermission}>
+                                Activar Recordatorios
+                            </button>
+                        </div>
+                    )}
+
+
                     <div className="lista-transacciones-neumorph custom-scrollbar-hidden">
                         {Object.keys(groupedTransactions).length > 0 ? (
                             Object.entries(groupedTransactions).map(([dateKey, transactions]) => {
@@ -157,9 +168,14 @@ export const TotalGastos = () => {
                                     day: '2-digit', month: 'short', year: 'numeric'
                                 }).replace('.', '');
 
+                                const totalDelDia = transactions.reduce((sum, t) => sum + t.monto, 0);
+
                                 return (
                                     <div key={dateKey} className="transaction-group">
-                                        <h5 className="transaction-group-date">{formattedDate}</h5>
+                                        <div className="transaction-group-header">
+                                            <h5 className="transaction-group-date">{formattedDate}</h5>
+                                            <span className="transaction-group-total"><CurrencyText />{formatCurrency(totalDelDia)} </span>
+                                        </div>
                                         {transactions.map(t => <TransaccionItem key={t.id} transaccion={t} />)}
                                     </div>
                                 );

@@ -67,7 +67,7 @@ export const TransaccionItem = ({ transaccion }: TransaccionItemProps) => {
                         {IconoCategoria && <IconoCategoria size={18} className="flex-shrink-0" />}
                         <span className="description">{transaccion.descripcion || transaccion.categoria}</span>
                     </div>
-                    <span className={`amount`}><CurrencyText />{formatCurrency(transaccion.monto)}</span>
+                    <span className={`transaccion-item-amount`}><CurrencyText />{formatCurrency(transaccion.monto)}</span>
                 </div>
             )}
         </div>

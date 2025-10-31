@@ -40,7 +40,7 @@ export const Gastos = () => {
         toast.success("Se registró exitosamente");
 
         setMonto("");
-        setFecha("");
+        setFecha(format(new Date(), "yyyy-MM-dd"));
         setCategoria("");
         setDescripcion("");
     };

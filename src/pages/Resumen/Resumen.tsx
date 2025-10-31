@@ -27,7 +27,7 @@ export const Resumen = () => {
 
     return (
         <div style={{ padding: '1.5rem' }}>
-            <Container fluid className="p-2 d-flex flex-column gap-4">
+            <Container fluid className="p-2 d-flex flex-column gap-5">
                 <Indicators
                     transacciones={transacciones}
                     selectedMonth={selectedMonth}

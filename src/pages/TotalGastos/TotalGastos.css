@@ -10,10 +10,18 @@
 }
 
 .transaction-group {
-  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem; /* Espaciado entre los items de transacción */
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #88888836;
+}
+
+.transaction-group:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .transaction-group-date {
@@ -51,4 +59,17 @@
   box-shadow: inset 4px 4px 8px #d9d9d9, inset -4px -4px 8px #ffffff;
   color: var(--primary-color);
   font-weight: bold;
+}
+
+.transaction-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem; /* Para alinear el total con los items */
+}
+
+.transaction-group-total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--text-color-strong);
 }

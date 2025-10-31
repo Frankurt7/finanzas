@@ -9,7 +9,7 @@
 }
 
 .filter-button {
-  padding: 8px 16px;
+  padding: 8px 14px;
   border: none;
   border-radius: 12px; /* Coincidir con otros botones */
   background-color: var(--background-color);
