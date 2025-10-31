@@ -6,14 +6,13 @@ import { ITransaction } from "slices/financesSlice";
 import { TransaccionItem } from "pages/Resumen/components/ListaTransacciones/components";
 import "pages/Resumen/components/ListaTransacciones/ListaTransacciones.css";
 import "./TotalGastos.css";
-import { DateRange, DateRangeFilter } from "shared/components/DateRangeFilter/DateRangeFilter";
-import { CurrencyText } from "shared/components/CurrencyText/CurrencyText";
+import { DateRange, DateRangeFilter, CurrencyText } from "shared/components";
 import { getFontSizeForAmount } from "shared/utils/formatText.utils";
 import { formatCurrency } from "shared/utils/number.utils";
 import { useCountUp } from "./useCountUp";
-import { iconOptions } from "pages/Categorias/components/IconOptions/icon-options";
+import { iconOptions } from "pages/Categorias/components/IconOptions";
 
-export default function TotalGastos() {
+export const TotalGastos = () => {
     const allTransactions = useSelector(
         (state: RootState) => state.finances.transacciones
     );

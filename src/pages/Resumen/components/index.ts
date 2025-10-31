@@ -1,4 +1,4 @@
-export { default as ListaTransacciones } from "./ListaTransacciones/ListaTransacciones";
-export { Indicators } from "./Indicators/Indicators";
-export { GraphsData } from "./GraphsData/GraphsData";
-export { TopCategoriasBarChart } from "./TopCategoriasBarChart/TopCategoriasBarChart";
+export * from './GraphsData';
+export * from './Indicators';
+export * from './ListaTransacciones';
+export * from './TopCategoriasBarChart';

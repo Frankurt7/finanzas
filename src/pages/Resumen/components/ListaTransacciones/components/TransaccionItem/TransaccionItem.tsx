@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ITransaction, eliminarTransaccion } from 'slices/financesSlice';
 import { formatCurrency } from 'shared/utils/number.utils';
-import { CurrencyText } from 'shared/components/CurrencyText/CurrencyText';
+import { CurrencyText } from 'shared/components';
 import { TagFill, Trash } from 'react-bootstrap-icons';
 import { getIconComponent } from 'pages/Categorias/components';
 import { AppDispatch, RootState } from 'store';
@@ -12,7 +12,7 @@ interface TransaccionItemProps {
     transaccion: ITransaction;
 }
 
-export default function TransaccionItem({ transaccion }: TransaccionItemProps) {
+export const TransaccionItem = ({ transaccion }: TransaccionItemProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch<AppDispatch>();
     const categorias = useSelector((state: RootState) => state.categorias.lista);

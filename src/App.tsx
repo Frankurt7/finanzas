@@ -1,11 +1,11 @@
-import { Categorias, Gastos, Resumen } from "pages";
+import { Categorias, Gastos, Resumen, TotalGastos } from "pages";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BottomNav } from "shared/components";
-import TotalGastos from "pages/TotalGastos/TotalGastos";
+
 
 import "./App.css"
 
-function App() {
+export const App = () => {
   return (
     <BrowserRouter>
       <div className="app-container d-flex flex-column min-vh-100">
@@ -24,5 +24,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;

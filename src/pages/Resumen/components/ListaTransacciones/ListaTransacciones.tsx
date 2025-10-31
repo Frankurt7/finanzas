@@ -7,7 +7,7 @@ interface IListaTransaccionesPorps {
     transacciones: Array<ITransaction>
 }
 
-export default function ListaTransacciones({ transacciones }: IListaTransaccionesPorps) {
+export const ListaTransacciones = ({ transacciones }: IListaTransaccionesPorps) => {
     return (
         <div className="lista-transacciones-container">
             <div className="lista-transacciones-header">

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"; // Importa useRef
 import Select, { components, SingleValue } from "react-select";
 import { ICategoria } from "slices/categoriasSlice";
 import "./CategoryForm.css";
-import { IconOption, iconOptions } from "../IconOptions/icon-options";
+import { IconOption, iconOptions } from "../IconOptions";
 
 interface CategoryFormProps {
     onSubmit: (data: { nombre: string; icono: string }) => void;

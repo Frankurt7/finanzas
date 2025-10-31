@@ -5,7 +5,7 @@ import { AppDispatch, RootState } from "store";
 import { ListaTransacciones, Indicators, GraphsData } from "./components";
 import { setSelectedDate } from "slices/filtersSlice";
 
-export default function Resumen() {
+export const Resumen = () => {
     const dispatch = useDispatch<AppDispatch>();
     const transacciones = useSelector(
         (state: RootState) => state.finances.transacciones

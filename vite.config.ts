@@ -3,6 +3,8 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 import tsconfigPaths from "vite-tsconfig-paths";
 
+import path from "path";
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -26,6 +28,16 @@ export default defineConfig({
         ],
       },
     }),
-    tsconfigPaths(),
+    tsconfigPaths({ projects: ["./tsconfig.app.json"] }),
   ],
+  resolve: {
+    alias: {
+      pages: path.resolve(__dirname, "src/pages"),
+      shared: path.resolve(__dirname, "src/shared"),
+      components: path.resolve(__dirname, "src/shared/components"),
+      slices: path.resolve(__dirname, "src/slices"),
+      store: path.resolve(__dirname, "src/store"),
+      styles: path.resolve(__dirname, "src/styles"),
+    },
+  },
 });

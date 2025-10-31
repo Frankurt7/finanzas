@@ -10,7 +10,7 @@ interface BottomNavItemProps {
   activeColor: string; // e.g., '#0d6efd'
 }
 
-export default function BottomNavItem({ to, label, icon, activeColor }: BottomNavItemProps) {
+export const BottomNavItem = ({ to, label, icon, activeColor }: BottomNavItemProps) => {
   return (
     <NavLink
       to={to}

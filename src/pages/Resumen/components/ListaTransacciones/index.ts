@@ -1,1 +1,1 @@
-export { default as ListaTransacciones } from "./ListaTransacciones";
+export * from './ListaTransacciones';

@@ -1,6 +1,6 @@
 import { Tab, Tabs } from "react-bootstrap";
 import "./GraphsData.css";
-import { TopCategoriasBarChart } from "../TopCategoriasBarChart/TopCategoriasBarChart";
+import { TopCategoriasBarChart } from "../TopCategoriasBarChart";
 import { GastosLineChart } from "./GastosLineChart";
 
 export const GraphsData = () => {

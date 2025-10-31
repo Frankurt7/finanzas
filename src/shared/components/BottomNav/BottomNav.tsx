@@ -4,7 +4,7 @@ import {
   PlusCircleFill,
   JournalBookmarkFill,
 } from "react-bootstrap-icons";
-import BottomNavItem from "./components/BottomNavItem";
+import { BottomNavItem } from "./components";
 import "./BottomNav.css";
 
 const navItems = [
@@ -34,7 +34,7 @@ const navItems = [
   },
 ];
 
-export default function BottomNav() {
+export const BottomNav = () => {
   return (
     <nav className="bottom-nav-neumorph">
       {navItems.map((item) => (

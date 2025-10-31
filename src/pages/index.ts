@@ -1,3 +1,4 @@
-export { default as Resumen } from "./Resumen/Resumen";
-export { default as Gastos } from "./Gastos/Gastos";
-export { default as Categorias } from "./Categorias/Categorias";
+export * from './Resumen';
+export * from './Gastos';
+export * from './Categorias';
+export * from './TotalGastos';

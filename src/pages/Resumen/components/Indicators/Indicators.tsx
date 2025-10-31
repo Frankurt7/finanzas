@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { formatCurrency } from "shared/utils/number.utils";
-import { CurrencyText } from "shared/components/CurrencyText/CurrencyText";
-import { DatePicker } from "shared/components/DatePicker/DatePicker";
+import { CurrencyText, DatePicker } from "shared/components";
 import { ITransaction } from "slices/financesSlice";
 import "./Indicators.css";
 import { getFontSizeForAmount } from "shared/utils/formatText.utils";

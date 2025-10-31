@@ -5,7 +5,7 @@ import { RootState, AppDispatch } from "store";
 import { ListaCategorias, CategoryForm } from "./components";
 import "styles/neumorphic-form.css";
 
-function Categorias() {
+export const Categorias = () => {
     const dispatch = useDispatch<AppDispatch>();
     const categorias = useSelector((state: RootState) => state.categorias.lista);
 
@@ -59,4 +59,4 @@ function Categorias() {
     );
 }
 
-export default Categorias;
+

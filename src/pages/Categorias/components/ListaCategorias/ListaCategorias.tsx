@@ -1,7 +1,7 @@
 import { Pencil, Trash } from "react-bootstrap-icons";
 import { ICategoria } from "slices/categoriasSlice";
 import "./ListaCategorias.css";
-import { getIconComponent } from "../IconOptions/icon-options";
+import { getIconComponent } from "../IconOptions";
 
 interface ListaCategoriasProps {
     categorias: ICategoria[];
@@ -10,7 +10,7 @@ interface ListaCategoriasProps {
     onDelete: (id: number) => void;
 }
 
-export default function ListaCategorias({ categorias, editando, onEdit, onDelete }: ListaCategoriasProps) {
+export const ListaCategorias = ({ categorias, editando, onEdit, onDelete }: ListaCategoriasProps) => {
     return (
         <div className="lista-categorias-container">
             <h5 className="mb-3">Lista de categorías</h5>

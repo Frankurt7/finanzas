@@ -11,11 +11,23 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@src/*": [
-        "src/*"
+      "pages/*": [
+        "src/pages/*"
       ],
-      "@components/*": [
-        "src/components/*"
+      "shared/*": [
+        "src/shared/*"
+      ],
+      "components/*": [
+        "src/shared/components/*"
+      ],
+      "slices/*": [
+        "src/slices/*"
+      ],
+      "store/*": [
+        "src/store/*"
+      ],
+      "styles/*": [
+        "src/styles/*"
       ]
     }
   }

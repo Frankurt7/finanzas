@@ -1,18 +1,18 @@
-import { CurrencyText } from "shared/components/CurrencyText/CurrencyText";
+import { CurrencyText } from "shared/components";
 import { formatCurrency } from "shared/utils/number.utils";
 import "./SummaryCard.css";
 
-interface SummaryCardProps {
+interface ISummaryCardProps {
     icon?: React.ReactNode;
     amount: number;
     variant: "success" | "danger" | "primary";
 }
 
-export default function SummaryCard({
+export const SummaryCard = ({
     icon,
     amount,
     variant,
-}: SummaryCardProps) {
+}: ISummaryCardProps) => {
     return (
         <div className="summary-card-neumorphic mb-3">
             <div className="text-center d-flex flex-row gap-3 align-items-center">

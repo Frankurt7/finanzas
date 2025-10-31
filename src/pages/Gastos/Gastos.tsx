@@ -5,9 +5,9 @@ import { format } from "date-fns";
 import Select from "react-select";
 import { agregarTransaccion } from "slices/financesSlice";
 import { AppDispatch, RootState } from "store";
-import { DatePicker } from "shared/components/DatePicker/DatePicker";
+import { DatePicker } from "shared/components";
 
-export default function Gastos() {
+export const Gastos = () => {
     const dispatch = useDispatch<AppDispatch>();
     const categorias = useSelector((state: RootState) => state.categorias.lista);
 
