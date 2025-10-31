@@ -4,6 +4,7 @@ import { editarCategoria, agregarCategoria, eliminarCategoria, ICategoria } from
 import { RootState, AppDispatch } from "store";
 import { ListaCategorias, CategoryForm } from "./components";
 import "styles/neumorphic-form.css";
+import toast from "react-hot-toast";
 
 export const Categorias = () => {
     const dispatch = useDispatch<AppDispatch>();

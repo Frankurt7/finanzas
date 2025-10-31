@@ -19,7 +19,7 @@ export const useCountUp = (end: number, duration: number = 800) => {
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
       const easedProgress = easeOutExpo(progress);
 
-      setCount(Math.floor(easedProgress * (end - startValue) + startValue));
+      setCount(easedProgress * (end - startValue) + startValue);
 
       if (progress < 1) {
         animationFrameId.current = requestAnimationFrame(step);
