@@ -128,12 +128,9 @@ export const CategoryForm = ({ onSubmit, onCancel, initialData }: CategoryFormPr
                 >
                     {initialData ? "Guardar" : "Agregar"}
                 </button>
-
-                {initialData && (
-                    <button type="button" className="neumorphic-button" onClick={onCancel}>
-                        Cancelar
-                    </button>
-                )}
+                <button type="button" className="neumorphic-button" onClick={onCancel}>
+                    Cancelar
+                </button>
             </div>
         </form>
     );
