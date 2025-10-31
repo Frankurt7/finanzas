@@ -6,6 +6,7 @@ import Select from "react-select";
 import { agregarTransaccion } from "slices/financesSlice";
 import { AppDispatch, RootState } from "store";
 import { DatePicker } from "shared/components";
+import toast from "react-hot-toast";
 
 export const Gastos = () => {
     const dispatch = useDispatch<AppDispatch>();

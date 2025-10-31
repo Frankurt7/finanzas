@@ -16,8 +16,10 @@ export const Categorias = () => {
 
         if (editando !== null) {
             dispatch(editarCategoria({ id: editando, nombre, icono }));
+            toast.success("Se editó exitosamente");
         } else {
             dispatch(agregarCategoria({ nombre, icono }));
+            toast.success("Se agregó exitosamente");
         }
 
         limpiarFormulario();
