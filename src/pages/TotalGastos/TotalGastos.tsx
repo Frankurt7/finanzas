@@ -185,6 +185,7 @@ export const TotalGastos = () => {
                         )}
                     </div>
                 </div>
+
             </div>
 
         </div>

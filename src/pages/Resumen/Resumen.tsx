@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Container } from "react-bootstrap";
 import { AppDispatch, RootState } from "store";
-import { ListaTransacciones, Indicators, GraphsData } from "./components";
+import { ListaTransacciones, Indicators, GraphsData, AnalisisIA } from "./components";
 import { setSelectedDate } from "slices/filtersSlice";
 
 export const Resumen = () => {
@@ -34,6 +34,8 @@ export const Resumen = () => {
                     selectedYear={selectedYear}
                     onDateChange={handleDateChange}
                 />
+
+                <AnalisisIA />
 
                 {tieneTransacciones ? (
                     <ListaTransacciones transacciones={ultimasTransacciones} />

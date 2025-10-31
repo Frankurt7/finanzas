@@ -23,7 +23,7 @@
   color: var(--text-color); /* Usar el color de texto general */
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .ver-mas-link:hover {

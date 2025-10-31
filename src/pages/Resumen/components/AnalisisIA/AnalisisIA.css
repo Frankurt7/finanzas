@@ -1,0 +1,76 @@
+.analisis-ia {
+  background-color: #f0f2f5; /* Fondo base para neomorfismo */
+  border-radius: 20px;
+  min-height: 150px;
+}
+
+.analisis-ia h4 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.analisis-ia h4 span {
+  color: var(--listado-color);
+  font-weight: bold;
+}
+
+.loading-text {
+  text-align: center;
+  font-style: italic;
+  color: #6c757d;
+  padding: 2rem 0;
+}
+
+.loading-text span {
+  color: var(--listado-color);
+  font-weight: bold;
+}
+
+.analysis-result {
+  background: #f0f2f5; /* Mismo fondo que el contenedor */
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 8px 8px 15px #d9d9d9, -8px -8px 15px #ffffff;
+  color: #555;
+}
+
+/* Estilos para los títulos dentro de la tarjeta */
+.analysis-result h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.analysis-result h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  padding-top: 0.75rem;
+}
+
+.analysis-result ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.analysis-result p {
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.analysis-result li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+.analysis-result .currency-slash {
+  font-size: calc(0.65em);
+  position: relative;
+  top: -0.15em;
+  font-weight: 900;
+  text-shadow: 0.5px 0 currentColor;
+}
