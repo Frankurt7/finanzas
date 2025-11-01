@@ -16,13 +16,16 @@ interface IndicatorsProps {
 export const Indicators = ({ transacciones, selectedMonth, selectedYear, onDateChange }: IndicatorsProps) => {
 
     const totalGastos = useMemo(() => {
-        const primerDiaMesSeleccionado = new Date(selectedYear, selectedMonth, 1);
-        const ultimoDiaMesSeleccionado = new Date(selectedYear, selectedMonth + 1, 0);
+        const startDate = new Date(selectedYear, selectedMonth, 1);
+        const endDate = new Date(selectedYear, selectedMonth + 1, 1);
 
         return transacciones
             .filter(t => {
-                const fechaTransaccion = new Date(t.fecha);
-                return fechaTransaccion >= primerDiaMesSeleccionado && fechaTransaccion <= ultimoDiaMesSeleccionado;
+                // Dates in 'YYYY-MM-DD' format are parsed as UTC midnight, which can cause timezone issues.
+                // Replacing hyphens with slashes makes JavaScript parse the date as local midnight.
+                // We check for 'T' to avoid replacing hyphens in full ISO datetime strings where it's not needed.
+                const transactionDate = new Date(t.fecha.includes('T') ? t.fecha : t.fecha.replace(/-/g, '/'));
+                return transactionDate >= startDate && transactionDate < endDate;
             })
             .reduce((acc, t) => acc + t.monto, 0);
     }, [transacciones, selectedMonth, selectedYear]);
