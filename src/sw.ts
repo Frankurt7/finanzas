@@ -10,12 +10,19 @@ const REMINDER_NOTIFICATION_TAG = "daily-reminder";
 const ANALYSIS_NOTIFICATION_TAG = "new-analysis";
 
 self.addEventListener("install", () => {
-  console.log("Service Worker instalado");
+  console.log("Service Worker: instalado. Forzando activación (skipWaiting).");
+  self.skipWaiting();
 });
 
 self.addEventListener("activate", (event) => {
-  console.log("Service Worker activado");
-  event.waitUntil(scheduleReminderNotification());
+  console.log("Service Worker: activado. Reclamando clientes.");
+  event.waitUntil(
+    (async () => {
+      await self.clients.claim();
+      // After claiming clients, schedule the notifications.
+      await scheduleReminderNotification();
+    })()
+  );
 });
 
 self.addEventListener("message", (event) => {
