@@ -88,8 +88,25 @@ const AnalisisIA: React.FC = () => {
       setError(null);
 
       setTimeout(() => {
-        const totalSpent = transacciones.reduce((acc, t) => acc + t.monto, 0);
-        const categoryTotals = transacciones.reduce((acc, t) => {
+        const today = new Date();
+        const dayOfWeek = today.getDay(); // Sunday = 0, Monday = 1, etc.
+        const adjustedDay = dayOfWeek === 0 ? 6 : dayOfWeek - 1; // Monday = 0, Sunday = 6
+
+        const lastSunday = new Date(today);
+        lastSunday.setDate(today.getDate() - adjustedDay - 1);
+        lastSunday.setHours(23, 59, 59, 999);
+
+        const lastMonday = new Date(lastSunday);
+        lastMonday.setDate(lastSunday.getDate() - 6);
+        lastMonday.setHours(0, 0, 0, 0);
+
+        const transaccionesDeLaSemana = transacciones.filter(t => {
+          const fechaTransaccion = new Date(t.fecha);
+          return fechaTransaccion >= lastMonday && fechaTransaccion <= lastSunday;
+        });
+
+        const totalSpent = transaccionesDeLaSemana.reduce((acc, t) => acc + t.monto, 0);
+        const categoryTotals = transaccionesDeLaSemana.reduce((acc, t) => {
           acc[t.categoria] = (acc[t.categoria] || 0) + t.monto;
           return acc;
         }, {} as Record<string, number>);
@@ -156,7 +173,7 @@ const AnalisisIA: React.FC = () => {
                   <strong style={{ fontSize: "1.1rem" }}>
                     <CurrencyText /> {formatCurrency(analysisData.totalSpent)}
                   </strong>{" "}
-                  este periodo.
+                  la semana pasada.
                 </>
               )}
             </li>
